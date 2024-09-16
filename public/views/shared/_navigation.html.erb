@@ -10,18 +10,19 @@
       </button>
       <div class="collapse navbar-collapse" id="collapsemenu">
         <ul class="nav nav navbar-nav">
-           <div class="navbar">
-            <a href="#home">Home</a>
-            <a href="#news">News</a>
-          <div class="dropdown">
-            <button class="dropbtn">Dropdown
+           <div class="dropdown">
+            <button class="dropbtn">Repositories
               <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-        </div>
-  </div>
+            </button>
+            <div class="dropdown-content">
+            <a href="https://archivesspace.amherst.edu/repositories/3">Amherst Center for Russian Culture </a>
+            <a href="https://archivesspace.amherst.edu/repositories/2">Amherst College Archives and Special Collections </a>
+            </div>
+           <div class="navbar">
+            <a href="https://archivesspace.amherst.edu/repositories/resources">Collections</a>
+            <a href="https://archivesspace.amherst.edu/subjects">Subjects</a>
+            <a href="https://archivesspace.amherst.edu/agents">Agents</a>
+          </div>
 </div> 
           <% unless AppConfig[:pui_hide][:search_tab] %>
             <li><a href="<%=  app_prefix('/search?reset=true') %>" title="<%= I18n.t('search_tab', :target => t('archive._plural'))%>">

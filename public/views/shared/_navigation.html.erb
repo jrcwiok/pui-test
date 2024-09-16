@@ -10,10 +10,19 @@
       </button>
       <div class="collapse navbar-collapse" id="collapsemenu">
         <ul class="nav nav navbar-nav">
-          <%# TODO: add class="active" if we're on that page %>
-          <% $MAIN_MENU.each do |link| %>
-            <li><a href="<%= app_prefix(link[0]) %>"><%= t(link[1]) %></a></li>
-          <% end %>
+           <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+          <div class="dropdown">
+            <button class="dropbtn">Dropdown
+              <i class="fa fa-caret-down"></i>
+          </button>
+      <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+    </div>
+  </div>
+</div> 
           <% unless AppConfig[:pui_hide][:search_tab] %>
             <li><a href="<%=  app_prefix('/search?reset=true') %>" title="<%= I18n.t('search_tab', :target => t('archive._plural'))%>">
                 <span class="fa fa-search" aria-hidden="true"></span>

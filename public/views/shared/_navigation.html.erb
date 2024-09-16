@@ -1,5 +1,5 @@
 <section id="navigation">
-  <nav class="navbar navbar-default" aria-label="<%= I18n.t("navigation.top_level") %>">
+  <nav class="navbar navbar-default" aria-label="top-level navigation">
     <div class="container-fluid navbar-header top-bar">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsemenu"
               aria-expanded="false">
@@ -10,20 +10,6 @@
       </button>
       <div class="collapse navbar-collapse" id="collapsemenu">
         <ul class="nav nav navbar-nav">
-          <li class="dropdown">
-            <a class="dropdown-toggle" href="<%= app_prefix("/repositories") %>">
-              <%= t('repository._plural') %> <span class="caret hidden-xs"></span></a>
-            <ul class="dropdown-menu hidden-xs">
-
-<%#
-need a real way to do this...
-but for now, i'm just hardcoding this as a proof of concept
-(before moving into PROD, move the CSS bit outta here, too.)
-%>
-
-<li><a href="<%= app_prefix("/repositories/1") %>">Arts Library</a></li>
-<li><a href="<%= app_prefix("/repositories/2") %>">Beinecke Library</a></li>
-</ul>
           <%# TODO: add class="active" if we're on that page %>
           <% $MAIN_MENU.each do |link| %>
             <li><a href="<%= app_prefix(link[0]) %>"><%= t(link[1]) %></a></li>
